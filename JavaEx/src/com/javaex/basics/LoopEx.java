@@ -7,10 +7,38 @@ public class LoopEx {
 	public static void main(String[] args) {
 //		whileEx();
 //		whileGugu();
-		doWhileEx();
+//		doWhileEx();
+//		forGugu();
+		continueEx();
+		
 		System.out.println("End of Code");
 	}
-
+	
+	private static void continueEx() {
+		for (int i = 1; i <= 20 ; i++) {
+			// 2의 배수, 3의 배수는 출력하지 않는다.
+			if (i % 2 == 0 || i % 3 == 0)
+				continue;
+			System.out.println(i);
+			
+		}
+	}
+	
+	private static void forGugu() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("단을 입력하세요");
+		int dan = scanner.nextInt();
+		
+		for (int i = 1;	// 초기화
+			i <= 9;	// 반복 조건
+			i++) {	// 증감식
+			System.out.println(dan + "*" + i + "=" + (dan * i));
+		}
+		
+		scanner.close();
+	}
+	
 	private static void doWhileEx() {
 		//	적어도 한번은 수행되어야 하는 반복,
 		//	반복 조건이 반복문 내부에서 할당되는 경우
