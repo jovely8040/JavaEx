@@ -5,10 +5,10 @@ import java.util.Arrays;
 public class ArrayEx {
 
 	public static void main(String[] args) {
-//		defineArray();
+		defineArray();
 //		multiDimArray();
 //		arrayCopyFor();
-		arrayCopySystem();
+//		arrayCopySystem();
 	}
 
 	private static void arrayCopySystem() {
@@ -116,6 +116,15 @@ public class ArrayEx {
 		System.out.println("names의 길이:" + names.length);
 
 		//	인덱스는 0부터 .length - 1까지
+//		%s : 문자열
+//		%c : 문자 1개
+//		%d : +-부호 있는 정수
+//		%u : +-부호 없는 정수
+//		%f : 실수
+//		%0.3f : 실수 (소수점 3자리까지 나오게)
+//		%X : 16진수 대문자로
+//		%x : 16진수 소문자로
+//		%02X : 16진수 대문자로. 2자리 헥사에서, 앞의 빈 칸 있으면 0으로 채움
 		for (int i = 0; i < names.length; i++) {
 			System.out.printf("%s (%.2f) : scores = %d%n", 
 					names[i], heights[i], scores[i]);
@@ -132,6 +141,12 @@ public class ArrayEx {
 
 		System.out.println("scores:" + Arrays.toString(scores));
 		System.out.println("scores2:" + Arrays.toString(scores2));
+		// 배열 자체에서 toString()을 사용하면 배열의 내용이 아니라 배열의 주소값이 출력
+		// 배열의 내용을 출력하려면 Arrays.toString()을 사용
+		//ex.
+		//double[] values = {1.0, 1.1, 1.2};
+		//System.out.println(values.toString()); // 이렇게 하면 [D@46a49e6 같은 값이 출력
+		//System.out.println(Arrays.toString(values)); // 이렇게 하면 [1.0, 1.1, 1.2] 이 출력
 
 	}
 
