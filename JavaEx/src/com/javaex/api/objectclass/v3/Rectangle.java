@@ -1,9 +1,9 @@
 package com.javaex.api.objectclass.v3;
 
-public class Rectangle {
+public class Rectangle implements Cloneable {
 	//	필드
-	private int width;
-	private int height;
+	int width;
+	int height;
 
 	//	생성자
 	public Rectangle(int width, int height) {
@@ -27,4 +27,17 @@ public class Rectangle {
 	public String toString() {
 		return "Rectangle [width=" + width + ", height=" + height + "]";
 	}
+	
+	// 복제 객체를 생성하는 메서드
+		public Rectangle getClone() {
+			Rectangle clone = null;
+			
+			try {
+				clone = (Rectangle)clone(); // clone() 메서드는 checked 예외
+			} catch (CloneNotSupportedException e) {
+				e.printStackTrace();
+			}
+			
+			return clone;
+		}
 }
