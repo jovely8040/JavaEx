@@ -31,8 +31,7 @@ public class ColorPoint extends Point{
 //				super.getY(), 
 //				color);
 		//	방법 2. 부모의 필드를 protected로 변경
-		System.out.printf("색깔점[x=%d, y=%d, color=%s]을 그렸습니다.%n",
-				x, y, color);
+		System.out.printf("색깔점[x=%d, y=%d, color=%s]을 그렸습니다.%n", x, y, color);
 	}
 
 	//	TODO: Point 클래스의 draw(boolean) 메서드를 오버라이드 해 보기
