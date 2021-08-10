@@ -2,6 +2,12 @@ package com.javaex.jdbc.oracle;
 
 import java.sql.*;
 
+// 실습1
+// hr/hr 계정의 사원 이름과 매니저 이름을 함께 출력해 봅시다
+// - 사원 이름은 이름 성 순으로 표기합니다
+// - 정렬은 사원 이름 내림차순입니다
+// - HREmpList 프로젝트를 만들고 HREmpList 클래스에서 실행되어야 합니다
+
 public class HREmpList {
 
 	public static void main(String[] args) {
