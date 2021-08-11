@@ -7,7 +7,7 @@ public class MainThread {
 			Thread thread = new DigitThread();
 			thread.setName("DigitThread");
 			// 쓰레드 시작: run 메서드 직접 호출하지 말자!
-			thread.start();
+//			thread.start();
 		
 //		// Main Thread 로직
 //		// A ~ Z까지 출력
@@ -22,7 +22,14 @@ public class MainThread {
 //			}
 //		}
 		
-		Thread thread2 = new Thread(new AlphabetThread()); // Runnable 집어 넣어
+		Thread thread2 = new Thread(new AlphabetThread());
+		// 쓰레드의 우선 순위 변경
+		// 1 (MIN) ~ 5 (NORMAL) ~ 10 (MAX)
+		thread.setPriority(Thread.MAX_PRIORITY);
+		thread.setPriority(Thread.MIN_PRIORITY);
+		
+		// 쓰레드 시작: run 메서드 직접 호출하지 말자!
+		thread.start();
 		thread2.start(); // run 메서드 대신 수행
 		
 		// MainThread의 흐름에 WorkingThread들의 흐름을 합류
